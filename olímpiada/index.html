@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos Olímpicos de Verão 2024</title>
+    <style>
+        :root {
+            --primary-color: #007BFF;
+            --secondary-color: #333;
+            --background-color: #f0f0f0;
+            --text-color: #555;
+            --font-family: Arial, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2em; /* Tamanho médio */
+            color: var(--secondary-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        h1 span {
+            display: inline-block;
+            padding: 0 5px;
+            font-weight: bold;
+            font-size: 1.5em; /* Tamanho médio */
+        }
+
+        .circle-color {
+            display: inline-block;
+            padding: 0 2px;
+        }
+
+        .circle-color[data-color="blue"] { color: #0057B8; }
+        .circle-color[data-color="yellow"] { color: #FFCD00; }
+        .circle-color[data-color="black"] { color: #000000; }
+        .circle-color[data-color="green"] { color: #009639; }
+        .circle-color[data-color="red"] { color: #E60000; }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            margin: 0;
+            color: var(--primary-color);
+            flex: 1;
+        }
+
+        p {
+            margin: 5px 0;
+            color: var(--text-color);
+        }
+
+        .instructions {
+            text-align: center;
+            color: var(--text-color);
+            margin-top: 20px;
+        }
+
+        .icon {
+            height: 30px;
+            width: auto;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        <span class="circle-color" data-color="blue">Jogos</span>
+        <span class="circle-color" data-color="black">Olímpicos</span>
+        <span class="circle-color" data-color="yellow">de</span>
+        <span class="circle-color" data-color="green">Verão</span>
+        <span class="circle-color" data-color="red">2024</span>
+    </h1>
+    <div class="container">
+        <a href="atletismo.html" class="section-link">
+            <section>
+                <img class="icon" src="media/atletismo_ícone.png" alt="Ícone de Atletismo">
+                <h2>Atletismo</h2>
+            </section>
+        </a>
+        <a href="natacao.html" class="section-link">
+            <section>
+                <img class="icon" src="media/natacao_ícone.png" alt="Ícone de Natação">
+                <h2>Natação</h2>
+            </section>
+        </a>
+        <a href="ginastica.html" class="section-link">
+            <section>
+                <img class="icon" src="media/ginastica_ícone.png" alt="Ícone de Ginástica Artística">
+                <h2>Ginástica Artística</h2>
+            </section>
+        </a>
+        <a href="futebol.html" class="section-link">
+            <section>
+                <img class="icon" src="media/futebol_ícone.png" alt="Ícone de Futebol">
+                <h2>Futebol</h2>
+            </section>
+        </a>
+        <a href="volei.html" class="section-link">
+            <section>
+                <img class="icon" src="media/volei_ícone.png" alt="Ícone de Vôlei de Praia">
+                <h2>Vôlei de Praia</h2>
+            </section>
+        </a>
+    </div>
+</body>
+</html>

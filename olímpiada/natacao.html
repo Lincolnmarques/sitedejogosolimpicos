@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natação - Jogos Olímpicos de Verão 2024</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #007BFF;
+        }
+
+        p {
+            color: #555;
+            text-align: justify;
+        }
+
+        .event {
+            margin-bottom: 30px;
+        }
+
+        .event img {
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .event h2 {
+            color: #007BFF;
+        }
+
+        .event ul {
+            color: #555;
+            text-align: justify;
+        }
+    </style>
+    <meta property="og:image" content="https://www.arenaswim.com/media/immagini/264_z_freestyle_Swim.gif?width=1200&height=630&mode=crop" />
+    <meta property="og:image" content="https://www.arenaswim.com/media/immagini/268_z_butterfly_Swim.gif?width=1200&height=630&mode=crop" />
+    <meta property="og:image" content="https://www.arenaswim.com/media/immagini/269_z_backstroke_Swim.gif?width=1200&height=630&mode=crop" />
+    <meta property="og:image" content="https://www.arenaswim.com/media/immagini/274_z_breaststroke_arms_only.gif?width=1200&height=630&mode=crop" />
+</head>
+<body>
+    <div class="container">
+        <h1>Natação</h1>
+        <p>A natação nos Jogos Olímpicos de Verão 2024 inclui provas de estilo livre, costas, peito e borboleta, além de medley e revezamentos.</p>
+
+        <div class="event">
+            <h2>Estilo Livre</h2>
+            <p>A prova de estilo livre é a mais popular, permitindo aos nadadores escolherem qualquer técnica.</p>
+        </div>
+
+        <div class="event">
+            <h2>Crawl</h2>
+            <p>O crawl é um dos estilos mais rápidos e comuns, utilizado em várias competições de estilo livre.</p>
+            <div class="image-container" data-image="crawl"></div>
+        </div>
+
+        <div class="event">
+            <h2>Costas</h2>
+            <p>As provas de costas exigem que os nadadores fiquem de costas durante toda a competição.</p>
+            <div class="image-container" data-image="costas"></div>
+        </div>
+
+        <div class="event">
+            <h2>Peito</h2>
+            <p>O estilo peito é conhecido pelo movimento simétrico dos braços e pernas.</p>
+            <div class="image-container" data-image="peito"></div>
+        </div>
+
+        <div class="event">
+            <h2>Borboleta</h2>
+            <p>O estilo borboleta é um dos mais difíceis, exigindo força e técnica apuradas.</p>
+            <div class="image-container" data-image="borboleta"></div>
+        </div>
+
+        <div class="event">
+            <h2>Medley</h2>
+            <p>O medley combina todos os estilos de natação em uma única prova. Os nadadores alternam entre crawl, costas, peito e borboleta.</p>
+        </div>
+
+        <div class="event">
+            <h2>Revezamentos</h2>
+            <p>Os revezamentos são provas em equipe, onde cada nadador nada uma parte da competição. Eles utilizam os estilos de natação das provas individuais, incluindo crawl, costas, peito e borboleta.</p>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.image-container').forEach(container => {
+            const imageType = container.getAttribute('data-image');
+            let imageUrl = '';
+
+            switch(imageType) {
+                case 'freestyle':
+                    imageUrl = 'https://www.arenaswim.com/media/immagini/264_z_freestyle_Swim.gif?width=1200&height=630&mode=crop';
+                    break;
+                case 'borboleta':
+                    imageUrl = 'https://www.arenaswim.com/media/immagini/268_z_butterfly_Swim.gif?width=1200&height=630&mode=crop';
+                    break;
+                case 'crawl':
+                    imageUrl = 'https://www.arenaswim.com/media/immagini/264_z_freestyle_Swim.gif?width=1200&height=630&mode=crop';
+                    break;
+                case 'costas':
+                    imageUrl = 'https://www.arenaswim.com/media/immagini/269_z_backstroke_Swim.gif?width=1200&height=630&mode=crop';
+                    break;
+                case 'peito':
+                    imageUrl = 'https://www.arenaswim.com/media/immagini/274_z_breaststroke_arms_only.gif?width=1200&height=630&mode=crop';
+                    break;
+                case 'medley':
+                    imageUrl = 'https://www.arenaswim.com/media/immagini/268_z_butterfly_Swim.gif?width=1200&height=630&mode=crop';
+                    break;
+                case 'revezamentos':
+                    imageUrl = 'https://www.arenaswim.com/media/immagini/264_z_freestyle_Swim.gif?width=1200&height=630&mode=crop';
+                    break;
+                default:
+                    break;
+            }
+
+            if (imageUrl) {
+                const img = document.createElement('img');
+                img.src = imageUrl;
+                container.appendChild(img);
+            }
+        });
+    </script>
+</body>
+</html>

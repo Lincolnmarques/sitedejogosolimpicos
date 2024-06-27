@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atletismo - Jogos Olímpicos de Verão 2024</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            text-align: center;
+            color: #007BFF;
+            margin: 0 10px 0 0;
+            font-size: 2em;
+        }
+
+        .header img {
+            height: 40px;
+            width: auto;
+        }
+
+        p {
+            color: #555;
+            text-align: justify;
+        }
+
+        .event {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .event video {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .event ul {
+            margin-bottom: 10px;
+        }
+
+        .event ul li {
+            margin-bottom: 5px;
+        }
+
+        .event ul li video {
+            margin-top: 5px;
+            border-radius: 5px;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Atletismo</h1>
+            <img src="media/atletismo_ícone.png" alt="Ícone de Atletismo">
+        </div>
+        <p>O atletismo é uma das modalidades mais antigas e tradicionais dos Jogos Olímpicos, sendo dividido em provas de pista e de campo. Nos Jogos Olímpicos de Verão de 2024, o atletismo inclui uma variedade de eventos que testam a velocidade, resistência, habilidade e força dos atletas.</p>
+
+        <div class="event">
+            <h2>Provas de Pista</h2>
+            <p>As provas de pista são focadas na velocidade e resistência dos atletas, incluindo diferentes distâncias e obstáculos:</p>
+            <ul id="provas-de-pista">
+                <!-- Conteúdo gerado por JavaScript -->
+            </ul>
+        </div>
+
+        <div class="event">
+            <h2>Eventos de Campo</h2>
+            <p>Os eventos de campo envolvem saltos e lançamentos, desafiando os atletas a demonstrar força, precisão e técnica:</p>
+            <ul id="eventos-de-campo">
+                <!-- Conteúdo gerado por JavaScript -->
+            </ul>
+        </div>
+        
+    </div>
+    <script>
+        const mediaPath = 'media/';
+        const trackEvents = [
+            { name: '100 metros', video: '100m.mp4' },
+            { name: '200 metros', video: '200m.mp4' },
+            { name: '400 metros', video: '400m.mp4' },
+            { name: '800 metros', video: '800m.mp4' },
+            { name: 'Corridas com obstáculos', video: 'obstaculos.mp4' },
+            { name: 'Revezamentos', video: 'revezamentos.mp4' }
+        ];
+
+        const fieldEvents = [
+            { name: 'Salto em distância', video: 'salto_distancia.mp4' },
+            { name: 'Salto triplo', video: 'salto_triplo.mp4' },
+            { name: 'Salto em altura', video: 'salto_altura.mp4' },
+            { name: 'Arremesso de peso', video: 'arremesso_peso.mp4' },
+            { name: 'Lançamento de disco', video: 'lancamento_disco.mp4' },
+            { name: 'Lançamento de dardo', video: 'lancamento_dardo.mp4' },
+            { name: 'Lançamento de martelo', video: 'lancamento_martelo.mp4' }
+        ];
+
+        function loadEvents(events, elementId) {
+            const ul = document.getElementById(elementId);
+            events.forEach(event => {
+                const li = document.createElement('li');
+                li.innerHTML = `${event.name}: 
+                    <video controls>
+                        <source src="${mediaPath}${event.video}" type="video/mp4">
+                        Seu navegador não suporta a tag de vídeo.
+                    </video>`;
+                ul.appendChild(li);
+            });
+        }
+
+        loadEvents(trackEvents, 'provas-de-pista');
+        loadEvents(fieldEvents, 'eventos-de-campo');
+    </script>
+</body>
+</html>
